@@ -4,7 +4,7 @@
  con números aleatorios de 1 dígito. Calcula y almacena en dos listas la suma de cada fila y columna de la matriz y las imprime.
 """
 AUTHOR = "Antonio Javier Garcia Martinez (cokesaeba@gmail.com)"
-VERSION = "0.0.1"
+VERSION = "1.0.0"
 
 import logging
 import argparse
@@ -69,17 +69,25 @@ def main():
     print(f"Matriz {N}x{N}\n")
 
     print_matriz(matriz)
+    # Forma "simple" de imprimir la matriz, menos legible pero ideal para depuración
+    # print(matriz) 
 
     # Inicializamos las listas en las que sumaremos las filas y columnas
     sum_filas = []
     sum_columnas = []
 
-    #TODO: Sumamos las filas y las columnas y las almacenamos en las listas
-    # Sumamos las filas
+    # Sumamos las filas y las columnas y las almacenamos en las listas
+    # Sumamos las filas, sum() suma todos los elementos de una lista (o iterable), cada lista de la matriz es una fila
+    for i in range(N):
+        sum_filas.append(sum(matriz[i]))
 
-    # Sumamos las columnas
+    # Sumamos las columnas, sumamos los elementos de cada columna, para ello recorremos la matriz por columnas y
+    for j in range(N):
+        sum_columnas.append(sum([matriz[i][j] for i in range(N)]))
 
     # Imprimimos los resultados
+    print(f"\nSuma de las filas: {sum_filas}")
+    print(f"\nSuma de las columnas: {sum_columnas}")
 
     logger.info("Fin programa!")
 
