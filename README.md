@@ -9,6 +9,7 @@ Repositorio: https://github.com/cokesaeba/IBM_python-full-stack
 
 Resultado pruebas unitarias:
 
+<code>
 pytest -v
 =========================================================== test session starts ===========================================================
 platform darwin -- Python 3.10.7, pytest-7.4.0, pluggy-1.2.0 -- /Library/Frameworks/Python.framework/Versions/3.10/bin/python3
@@ -27,4 +28,4 @@ test_matriz_NxN.py::test_suma_columnas[matriz1-expected1] PASSED                
 test_matriz_NxN.py::test_suma_columnas[matriz2-expected2] PASSED                                                                    [100%]
 
 ============================================================ 8 passed in 0.01s ============================================================
-
+</code>
