@@ -81,11 +81,15 @@ def main():
     for i in range(N):
         sum_filas.append(sum(matriz[i]))
 
-    # Sumamos las columnas, sumamos los elementos de cada columna, para ello recorremos la matriz por columnas y
-    for j in range(N):
-        sum_columnas.append(sum([matriz[i][j] for i in range(N)]))
+    # Sumamos las columnas, sumamos los elementos de cada columna, para ello recorremos la matriz por columnas:
+    #for j in range(N):
+    #    sum_columnas.append(sum([matriz[i][j] for i in range(N)]))
 
-    # Imprimimos los resultados
+    # Otra forma de hacerlo, más legible (como en el ejemplo del curso de IBM): 
+    for c in range(N):
+        sum_columnas.append(sum([row[c] for row in matriz]))
+
+    # Imprimimos los resultados, me gusta más utilizar f-strings que format():
     print(f"\nSuma de las filas: {sum_filas}")
     print(f"\nSuma de las columnas: {sum_columnas}")
 
