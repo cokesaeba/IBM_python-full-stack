@@ -16,7 +16,7 @@ def test_create_matriz_nula():
     with pytest.raises(ValueError):
         matriz = create_matriz(N)
 
-# Podemos 
+# Testamos casos tipo a ver si el resultado coincide con lo esperado 
 @pytest.mark.parametrize("matriz, expected", 
 [
     ([[0]], [0]),
